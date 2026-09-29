@@ -39,8 +39,8 @@ export default function Feature() {
     return (
         <div id="features" ref={containerRef} className="bg-MainOrange border-t-[20px] border-b-[10px] border-DarkBrown relative w-full h-[300vh] flex flex-col items-center text-[#F5EFEB]">
 
-            {/* Decorative vertical line */}
-            <div className="hidden sm:block absolute inset-0 inset-x-6 md:inset-x-10 w-[0.5px] h-full bg-white/30 pointer-events-none" />
+            {/* Decorative vertical line (flips to right side in RTL) */}
+            <div className="hidden sm:block absolute top-0 bottom-0 left-6 md:left-10 rtl:left-auto rtl:right-6 rtl:md:right-10 w-[0.5px] bg-white/30 pointer-events-none" />
 
             <Image
                 src="/images/film-grain.avif"
@@ -51,8 +51,8 @@ export default function Feature() {
                 className="object-cover opacity-50 pointer-events-none mix-blend-screen"
             />
             <div className="sticky top-0 w-full h-screen flex items-center justify-center overflow-hidden px-4 sm:px-8 md:px-12">
-                {/* Decorative horizontal tick */}
-                <div className="hidden sm:flex absolute top-110 md:top-100 left-6 md:left-10 w-8 md:w-10 h-[0.5px] bg-white/40" />
+                {/* Decorative horizontal tick (flips to right side in RTL) */}
+                <div className="hidden sm:flex absolute top-110 md:top-100 left-6 md:left-10 rtl:left-auto rtl:right-6 rtl:md:right-10 w-8 md:w-10 h-[0.5px] bg-white/40" />
 
                 {/* Chapter 1: Introduction */}
                 <motion.div
