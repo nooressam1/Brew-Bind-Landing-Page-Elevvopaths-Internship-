@@ -15,7 +15,7 @@ export default function About() {
             variants={containerVariants}
             whileInView="visible"
             initial="hidden"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="relative bg-Cream w-full flex flex-col lg:flex-row justify-center items-center overflow-hidden"
         >
             {/* Top on Mobile, Left on Desktop: Cafe Arch Image */}

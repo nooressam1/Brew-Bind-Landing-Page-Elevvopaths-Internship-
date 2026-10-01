@@ -17,7 +17,7 @@ export default function Footer() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="relative overflow-hidden bg-MainOrange w-full min-h-[350px] h-auto flex flex-col items-center justify-between"
         >
             {/* Film grain texture */}

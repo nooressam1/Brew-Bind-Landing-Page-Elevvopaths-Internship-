@@ -13,7 +13,7 @@ export default function Form() {
             initial="hidden"
             id="contact"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="relative bg-Cream w-full min-h-[600px] sm:min-h-[700px] md:min-h-[750px] py-12 sm:py-16 md:py-20 px-4 flex justify-center items-center overflow-hidden"
         >
             <motion.div variants={zoomLoopVariants} className="absolute inset-0 w-full h-full">

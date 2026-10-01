@@ -10,7 +10,7 @@ export default function OrangeDivider() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.4 }}
             className="relative flex h-20 bg-MainOrange justify-center items-center w-full overflow-hidden"
         >
             {/* Texture Overlay */}
