@@ -1,11 +1,11 @@
-# ☕ Brew & Bind — Landing Page
+#  Brew & Bind — Landing Page
 
 > **"Where stories are Brewed, Bound, and Shared."**  
-> An artisanal landing page for a hybrid café, independent bookstore, and hands-on bookbinding workshop — developed as part of the **Elevvo Internship Program**.
+> An artisanal landing page for a hybrid café, independent bookstore, and hands-on bookbinding workshop that was developed as part of the **Elevvo Internship Program**.
 
 ---
 
-## 📖 Overview
+
 
 **Brew & Bind** is a concept space that merges the warmth of specialty coffee with the tactile charm of curated literature and bookbinding craftsmanship. 
 
@@ -18,7 +18,7 @@ This repository contains the official high-performance, fully responsive landing
 - ** Editorial Splash Screen:** Elegant introductory screen setting the brand tone before transitioning smoothly into the main experience.
 - ** Full Bilingual Support (EN / AR):** Instant language switching with dynamic context, complete Arabic translations, and automatic Left-to-Right (LTR) / Right-to-Left (RTL) layout adjustments.
 - ** Warm Artisanal Design System:** Custom-tailored typography (`Sorts Mill Goudy`, `Lateef`, and `Geist`), botanical textures, and an earthy color palette (`MainOrange`, `MainGreen`, `DarkBrown`, `Cream`).
-- **🌊 Smooth Inertia Scrolling:** Powered by [Lenis](https://github.com/darkroomengineering/lenis) for a fluid, polished browsing feel.
+- ** Smooth Inertia Scrolling:** Powered by [Lenis](https://github.com/darkroomengineering/lenis) for a fluid, polished browsing feel.
 - ** Interactive Micro-Animations:** Section transitions, card hovers, and animated navigation drawers powered by [Framer Motion](https://www.framer.com/motion/).
 - ** Highlighted Brand Pillars:**
   - **Specialty Coffee:** Slow pour-overs, rich espresso, and rotating seasonal drinks.
@@ -45,7 +45,7 @@ This repository contains the official high-performance, fully responsive landing
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```text
 ├── public/
