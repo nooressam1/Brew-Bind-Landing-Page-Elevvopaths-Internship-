@@ -39,13 +39,13 @@ export default function Navbar() {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.2 }}
                         onClick={() => setIsMenuOpen(false)}
-                        className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm lg:hidden"
+                        className="fixed inset-0 z-10 bg-black/50 backdrop-blur-sm lg:hidden"
                         aria-hidden="true"
                     />
                 )}
             </AnimatePresence>
 
-            <nav className="absolute z-50 top-0 left-0 w-full px-4 sm:px-6 lg:px-10">
+            <nav className="absolute z-10 top-0 left-0 w-full px-4 sm:px-6 lg:px-10">
                 <div className="relative flex justify-between items-center w-full h-20 lg:h-24">
                     {/* Desktop Left Links (visible on lg+) */}
                     <div className="hidden lg:flex flex-1 justify-end items-center gap-8 xl:gap-12">
