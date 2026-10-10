@@ -1,18 +1,14 @@
 'use client';
-
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 import { useLanguage } from "@/lib/LanguageContext";
 import { useScrollSection } from "@/lib/ScrollContext";
-
 export default function Navbar() {
     const { t } = useLanguage();
     const { scrollToSection } = useScrollSection();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    // Close mobile menu on screen resize to desktop (lg breakpoint: 1024px)
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth >= 1024) {
@@ -22,15 +18,12 @@ export default function Navbar() {
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
-
     const handleNavClick = (id: string) => {
         scrollToSection(id);
         setIsMenuOpen(false);
     };
-
     return (
         <>
-            {/* Mobile Backdrop overlay */}
             <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div
@@ -44,10 +37,8 @@ export default function Navbar() {
                     />
                 )}
             </AnimatePresence>
-
             <nav className="absolute z-10 top-0 left-0 w-full px-4 sm:px-6 lg:px-10">
                 <div className="relative flex justify-between items-center w-full h-20 lg:h-24">
-                    {/* Desktop Left Links (visible on lg+) */}
                     <div className="hidden lg:flex flex-1 justify-end items-center gap-8 xl:gap-12">
                         <button
                             type="button"
@@ -64,8 +55,6 @@ export default function Navbar() {
                             {t.nav.about}
                         </button>
                     </div>
-
-                    {/* Brand Title: left-aligned on xs/mobile, centered on sm/tablets, in-flow on lg/desktop */}
                     <div className="shrink-0 text-left rtl:text-right px-1 sm:px-2 sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:text-center lg:static lg:translate-x-0 lg:px-8 pointer-events-auto">
                         <button
                             type="button"
@@ -75,8 +64,6 @@ export default function Navbar() {
                             Brew & Bind
                         </button>
                     </div>
-
-                    {/* Desktop Right Links + Language Switcher (visible on lg+) */}
                     <div className="hidden lg:flex flex-1 justify-start items-center gap-6 xl:gap-8">
                         <button
                             type="button"
@@ -94,8 +81,6 @@ export default function Navbar() {
                         </button>
                         <LanguageSwitcher className="shrink-0" />
                     </div>
-
-                    {/* Mobile Controls: Language Switcher + Hamburger Button (visible below lg, pushed to the end) */}
                     <div className="ml-auto lg:hidden flex items-center gap-2 sm:gap-3 shrink-0 z-10">
                         <LanguageSwitcher className="scale-90 sm:scale-100 origin-right rtl:origin-left" />
                         <button
@@ -109,12 +94,7 @@ export default function Navbar() {
                         </button>
                     </div>
                 </div>
-
-                {/* Mobile Dropdown Menu Card */}
                 <AnimatePresence>
-
-
-
                     {isMenuOpen && (
                         <motion.div
                             initial={{ opacity: 0, y: -15, scale: 0.96 }}
@@ -151,10 +131,7 @@ export default function Navbar() {
                             >
                                 {t.nav.contact}
                             </button>
-
                             <div className="w-full h-px bg-white/15 my-2" />
-
-
                         </motion.div>
                     )}
                 </AnimatePresence>

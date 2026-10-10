@@ -1,19 +1,15 @@
 'use client';
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Globe } from 'lucide-react';
 import { useLanguage } from '@/lib/LanguageContext';
-
 interface LanguageSwitcherProps {
   className?: string;
 }
-
 export default function LanguageSwitcher({
   className = '',
 }: LanguageSwitcherProps) {
   const { locale, setLocale } = useLanguage();
-
   return (
     <div
       className={`inline-flex shrink-0 whitespace-nowrap items-center gap-1 p-1 rounded-full bg-black/25 backdrop-blur-md border border-white/20 text-white ${className}`}
@@ -23,7 +19,6 @@ export default function LanguageSwitcher({
       <div className="px-1 text-white shrink-0">
         <Globe className="w-3.5 h-3.5" />
       </div>
-
       <motion.button
         whileTap={{ scale: 0.95 }}
         type="button"
@@ -35,7 +30,6 @@ export default function LanguageSwitcher({
       >
         EN
       </motion.button>
-
       <motion.button
         whileTap={{ scale: 0.95 }}
         type="button"

@@ -122,6 +122,5 @@ export const translations = {
         },
     },
 };
-
 export type Locale = "en" | "ar";
 export type TranslationType = typeof translations.en;

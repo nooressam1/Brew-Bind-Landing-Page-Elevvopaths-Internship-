@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import SplashScreen from "@/components/ui/SplashScreen";
 import Navbar from "@/components/layout/Navbar";
@@ -11,7 +10,6 @@ import Form from "@/components/sections/Form";
 import Footer from "@/components/layout/Footer";
 import { LanguageProvider } from "@/lib/LanguageContext";
 import { ScrollProvider } from "@/lib/ScrollContext";
-
 export default function Home() {
   const [loading, setLoading] = useState(true);
   return (
